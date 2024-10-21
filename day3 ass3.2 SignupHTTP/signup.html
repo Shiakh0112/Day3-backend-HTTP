@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body Style */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(145deg, #6a11cb, #2575fc);
+      /* Gradient background */
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+    }
+
+    /* Form Container */
+    form {
+      background-color: #fff;
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+      /* Larger, soft shadow */
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+      /* Centering text inside the form */
+      transition: transform 0.3s ease;
+    }
+
+    form:hover {
+      transform: scale(1.05);
+      /* Slight scale on hover */
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+      font-size: 26px;
+      font-weight: 600;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      margin-bottom: 8px;
+      font-size: 15px;
+      color: #444;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      font-size: 16px;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+      border-color: #2575fc;
+      /* Brighter blue focus */
+      box-shadow: 0 0 8px rgba(37, 117, 252, 0.4);
+    }
+
+    /* Submit Button Style */
+    input[type="submit"] {
+      width: 100%;
+      padding: 15px;
+      background-color: #6a11cb;
+      /* Gradient blue */
+      background-image: linear-gradient(145deg, #6a11cb, #2575fc);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #5c0db4;
+      box-shadow: 0 10px 20px rgba(106, 17, 203, 0.4);
+      /* Darker shadow */
+    }
+
+    /* Responsive Design */
+    @media (max-width: 500px) {
+      form {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <form action="/signup" method="POST">
+    <h2>Create Your Account</h2>
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" placeholder="Enter username" required>
+
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" placeholder="Enter password" required>
+
+    <input type="submit" value="Signup">
+  </form>
+</body>
+
+</html>

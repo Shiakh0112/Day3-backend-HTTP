@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stylish Navigation</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    nav {
+      background: linear-gradient(135deg, #ff7e5f, #feb47b);
+      /* Gradient background */
+      padding: 15px 30px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      /* Larger shadow for better depth */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 12px 30px;
+      margin: 0 15px;
+      border-radius: 50px;
+      /* Full-rounded links */
+      font-size: 17px;
+      font-weight: bold;
+      text-transform: uppercase;
+      /* Make the text uppercase for a bold look */
+      transition: background-color 0.4s ease, color 0.4s ease, transform 0.2s;
+      position: relative;
+    }
+
+    nav a::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.2);
+      /* Light overlay effect */
+      border-radius: 50px;
+      transition: opacity 0.3s ease;
+      opacity: 0;
+    }
+
+    nav a:hover::before {
+      opacity: 1;
+    }
+
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      /* Hover background change */
+      transform: scale(1.05);
+      /* Slight scale-up effect */
+    }
+
+    nav a.active {
+      background-color: rgba(255, 255, 255, 0.3);
+      /* Active link styling */
+    }
+
+    /* Responsive for smaller screens */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 10px 0;
+        width: 80%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="/" class="active">Home</a>
+    <a href="./signup">Sign up</a>
+    <a href="/allusers">All Users</a>
+  </nav>
+</body>
+
+</html>
